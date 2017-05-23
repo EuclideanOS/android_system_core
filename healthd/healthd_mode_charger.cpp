@@ -325,8 +325,9 @@ static void redraw_screen(struct charger *charger)
     /* try to display *something* */
     if (batt_anim->capacity < 0 || batt_anim->num_frames == 0) {
         draw_unknown(charger);
-    else
+    } else {
         draw_battery(charger);
+    }
     gr_flip();
 }
 
